@@ -1,0 +1,171 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+
+    /* Left Section with Window Tide Gradient */
+    .left-section {
+      flex: 1;
+      background: linear-gradient(135deg, #4A7CA0, #5C8DB2, #254E7B);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .left-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .left-section p {
+      max-width: 400px;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Decorative Shape */
+    .diagonal-shape {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(135deg, rgba(184,221,226,0.3), rgba(74,124,160,0.3));
+      transform: rotate(-15deg);
+      top: -50%;
+      left: -50%;
+      z-index: 0;
+    }
+
+    .left-section * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Right Section */
+    .right-section {
+      flex: 1;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #254E7B;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 40px 12px 40px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #4A7CA0;
+      outline: none;
+    }
+
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      color: #888;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+
+    .options label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .options a {
+      text-decoration: none;
+      color: #4A7CA0;
+      transition: color 0.3s;
+    }
+
+    .options a:hover {
+      color: #254E7B;
+    }
+
+    /* Login Button with Gradient */
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #4A7CA0, #254E7B);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .login-btn:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .left-section, .right-section {
+        flex: none;
+        width: 100%;
+        height: auto;
+      }
+      .left-section {
+        padding: 60px 20px;
+      }
+    }
