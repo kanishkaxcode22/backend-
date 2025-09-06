@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="MY portfolio.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 data-animate>About Me</h2>
+    <p data-animate>
+      Hello! I'm a passionate web developer who loves building modern, responsive, and user-friendly websites. I enjoy learning new technologies and improving my skills continuously.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2 data-animate>My Projects</h2>
+    <div class="project-card" data-animate>
+      <h3>Project One</h3>
+      <p>A responsive landing page built with HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project-card" data-animate>
+      <h3>Project Two</h3>
+      <p>A portfolio with engaging layouts and animations.</p>
+    </div>
+    <div class="project-card" data-animate>
+      <h3>Project Three</h3>
+      <p>A clean and modern blog website template.</p>
+    </div>
+    <div class="project-card" data-animate>
+      <h3>Project Four</h3>
+      <p>An interactive web app with JavaScript features.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 data-animate>Contact Me</h2>
+    <form data-animate>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
+  </footer>
+
+  <!-- Animation Script -->
+  <script>
+    const elements = document.querySelectorAll("[data-animate]");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+
+
+<!-- Project 1 -->
+  <div class="project-card" data-animate>
+    <img src="images/project1.png" alt="Project 1 screenshot">
+    <h3>Portfolio Website</h3>
+    <p>A responsive portfolio site built with HTML, CSS, and JavaScript.</p>
+    
+    <a href="https://github.com/kanishkaxcode22/backend-.git" target="_blank">💻 GitHub</a>
+  </div>
+
+</body>
+</html>
